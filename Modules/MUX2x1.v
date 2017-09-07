@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUX2x1(
+module MUX2x1(a, b, out);
 
-    );
+    parameter DATAWIDTH = 8;
+
+    input [DATAWIDTH - 1:0] a, b;
+    output reg [DATAWIDTH - 1:0] out;
 endmodule

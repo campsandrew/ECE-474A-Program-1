@@ -20,7 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ADD(
+module ADD(a, b, out);
 
-    );
+    parameter DATAWIDTH = 8;
+
+    input [DATAWIDTH - 1:0] a, b;
+    output reg [DATAWIDTH - 1:0] out;
+
+
+
 endmodule
