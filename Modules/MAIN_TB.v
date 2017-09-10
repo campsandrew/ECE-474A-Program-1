@@ -38,8 +38,25 @@ module MAIN_TB();
 
     always
         #10 clk <= ~clk;    // clock functionality
-    
+   
     initial begin
-    
+        clk <= 0;
+        rst <= 1;
+        #20 rst <= 0;
+        #10;
+        a <= 1; b <= 2; // ADD values, a1 should be 3
+        c <= 2; d <= 3; // COMP values, a2_lt should be 0
+        e <= 4; // DEC values, a3 should be 3
+        f <= 6; g <= 3; // DIV values, a4 should be 2
+        h <= 5; // INC values, a5 should be 6
+        i <= 7; j <= 3; // MOD values, a6 should be 1
+        k <= 4; l <= 2; // MUL values, a7 should be 8
+        m <= 2; n <= 3; a8_sel <= 1; // MUX2x1 values, a8 should be 2
+        o <= 4; // REG value, a9 should be 4
+        #15 o <= 3; rst <= 1; // REG values, a9 should be 0
+        #15 o <= 2; rst <= 0; // REG values, a9 should be 2
+        p <= 1; p_amt <= 1; // SHL values, a10 should be 2
+        q <= 8; q_amt <= 2; // SHR values, a11 should be 2
+        r <= 5; s <= 4; // SUB values, a12 should be 1
     end
 endmodule
