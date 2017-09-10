@@ -1,27 +1,23 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/05/2017 11:43:58 AM
-// Design Name: 
-// Module Name: Register
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Name: Andrew Camps, Jason Tran, Steve Miller
+// Project: Project 1
+// Create Date: 09/05/2017 11:43:58 AM 
+// Description: Returns a + 1 
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module INC();
+module INC(a, d);
 
     parameter DATAWIDTH = 8;
+    
+    input [DATAWIDTH - 1:0] a;
+    output reg [DATAWIDTH - 1:0] d;
+    
+    always @(*) begin
+    
+        d <= a + 1;
+    
+    end
     
 endmodule

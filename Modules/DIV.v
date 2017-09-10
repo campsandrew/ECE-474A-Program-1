@@ -1,29 +1,23 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/05/2017 11:43:58 AM
-// Design Name: 
-// Module Name: Register
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Name: Andrew Camps, Jason Tran, Steve Miller
+// Project: Project 1
+// Create Date: 09/05/2017 11:43:58 AM 
+// Description: Divider
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module DIV(a, b, out);
+module DIV(a, b, quot);
 
     parameter DATAWIDTH = 8;
 
     input [DATAWIDTH - 1:0] a, b;
-    output reg [DATAWIDTH - 1:0] out;
+    output reg [DATAWIDTH - 1:0] quot;
+    
+    always @(*) begin
+    
+        quot <= a / b;
+    
+    end
+    
 endmodule
