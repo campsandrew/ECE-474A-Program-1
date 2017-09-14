@@ -9,7 +9,7 @@
 
 module SUB(a, b, diff);
 
-    parameter DATAWIDTH = 8;
+    parameter DATAWIDTH = 2;
 
     input [DATAWIDTH - 1:0] a, b;
     output reg [DATAWIDTH - 1:0] diff;

@@ -9,7 +9,7 @@
 
 module COMP(a, b, gt, lt, eq);
 
-    parameter DATAWIDTH = 2;
+    parameter DATAWIDTH = 8;
 
     input [DATAWIDTH - 1:0] a, b;
     output reg gt, lt, eq;

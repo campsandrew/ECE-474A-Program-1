@@ -9,7 +9,7 @@
 
 module SHL(a, sh_amt, d);
 
-    parameter DATAWIDTH = 8;
+    parameter DATAWIDTH = 2;
     
     input [DATAWIDTH - 1:0] a;
     input [$clog2(DATAWIDTH) - 1:0] sh_amt;
