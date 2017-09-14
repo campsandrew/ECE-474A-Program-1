@@ -9,7 +9,7 @@
 
 module DIV(a, b, quot);
 
-    parameter DATAWIDTH = 2;
+    parameter DATAWIDTH = 8;
 
     input [DATAWIDTH - 1:0] a, b;
     output reg [DATAWIDTH - 1:0] quot;
