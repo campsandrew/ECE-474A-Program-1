@@ -9,7 +9,7 @@
 
 module REG(d, Clk, Rst, q);
 
-    parameter DATAWIDTH = 2;
+    parameter DATAWIDTH = 64;
 
     input Clk, Rst;
     input [DATAWIDTH - 1:0] d;
