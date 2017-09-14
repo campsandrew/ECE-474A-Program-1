@@ -19,6 +19,7 @@ module COMP(a, b, gt, lt, eq);
     end
     
     always @(*) begin
+        gt <= 0; lt <= 0; eq <= 0;
     
         if($signed(a) > $signed(b))
             gt <= 1;
