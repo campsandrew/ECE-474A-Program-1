@@ -21,20 +21,22 @@
 
 
 module MAIN_TB();
-    reg a, b; wire a1; // ADD args
-    reg c, d; wire a2_gt, a2_lt, a2_eq; // COMP args
-    reg e; wire a3; // DEC args
-    reg f, g; wire a4; // DIV args
-    reg h; wire a5; // INC args
-    reg i, j; wire a6; // MOD args
-    reg k, l; wire a7; // MUL args
-    reg m, n, a8_sel; wire a8; // MUX2x1 args
-    reg o, clk, rst; wire a9; // REG args
-    reg p, p_amt; wire a10; // SHL args
-    reg q, q_amt; wire a11; // SHR args
-    reg r, s; wire a12; // SUB args
+    parameter DATAWIDTH = 2;
 
-    MAIN MAIN_1(a, b, c, d, e, f, g, h, i, j, k, l, m, n, a8_sel, o, clk, rst, p, p_amt, q, q_amt, r, s, a1, a2_gt, a2_lt, a3_eq, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+    reg [DATAWIDTH - 1:0] a, b; wire [DATAWIDTH - 1:0] a1; // ADD args
+    reg [DATAWIDTH - 1:0] c, d; wire a2_gt, a2_lt, a2_eq; // COMP args
+    reg [DATAWIDTH - 1:0] e; wire [DATAWIDTH - 1:0] a3; // DEC args
+    reg [DATAWIDTH - 1:0] f, g; wire [DATAWIDTH - 1:0] a4; // DIV args
+    reg [DATAWIDTH - 1:0] h; wire [DATAWIDTH - 1:0] a5; // INC args
+    reg [DATAWIDTH - 1:0] i, j; wire [DATAWIDTH - 1:0] a6; // MOD args
+    reg [DATAWIDTH - 1:0] k, l; wire [DATAWIDTH - 1:0] a7; // MUL args
+    reg [DATAWIDTH - 1:0] m, n; reg a8_sel; wire [DATAWIDTH - 1:0] a8; // MUX2x1 args
+    reg [DATAWIDTH - 1:0] o; reg clk, rst; wire [DATAWIDTH - 1:0] a9; // REG args
+    reg [DATAWIDTH - 1:0] p; reg [$clog2(DATAWIDTH) - 1:0] p_amt; wire [DATAWIDTH - 1:0] a10; // SHL args
+    reg [DATAWIDTH - 1:0] q; reg [$clog2(DATAWIDTH) - 1:0] q_amt; wire [DATAWIDTH - 1:0] a11; // SHR args
+    reg [DATAWIDTH - 1:0] r, s; wire [DATAWIDTH - 1:0] a12; // SUB args
+
+    MAIN #(DATAWIDTH) MAIN_1(a, b, c, d, e, f, g, h, i, j, k, l, m, n, a8_sel, o, clk, rst, p, p_amt, q, q_amt, r, s, a1, a2_gt, a2_lt, a3_eq, a4, a5, a6, a7, a8, a9, a10, a11, a12);
 
     always
         #10 clk <= ~clk;    // clock functionality
