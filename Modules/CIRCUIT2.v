@@ -29,14 +29,14 @@ module CIRCUIT2(a, b, c, x, z, Clk, Rst);
     wire dLTe, dEQe, dGTe;
     wire [31:0] xwire, zwire;
     
-    ADD ADD_1(a, b, d);
-    ADD ADD_2(a, c, e);
-    SUB SUB_1(a, b, f);
-    COMP COMP_1(d, e, dGTe, dLTe, dEQe);
-    MUX2x1 MUX2x1_1(d, e, dLTe, g);
-    MUX2x1 MUX2x1_2(g, f, dEQe, h);
-    SHL SHL_1(g, dLTe, xwire);
-    SHR SHR_1(h, dEQe, zwire);
-    REG REG_1(x, Clk, Rst, xwire);
-    REG REG_2(z, Clk, Rst, zwire);
+    ADD #(32) ADD_1(a, b, d);
+    ADD #(32) ADD_2(a, c, e);
+    SUB #(32) SUB_1(a, b, f);
+    COMP #(32) COMP_1(d, e, dGTe, dLTe, dEQe);
+    MUX2x1 #(32) MUX2x1_1(d, e, dLTe, g);
+    MUX2x1 #(32) MUX2x1_2(g, f, dEQe, h);
+    SHL #(32) SHL_1(g, dLTe, xwire);
+    SHR #(32) SHR_1(h, dEQe, zwire);
+    REG #(32) REG_1(x, Clk, Rst, xwire);
+    REG #(32) REG_2(z, Clk, Rst, zwire);
 endmodule
