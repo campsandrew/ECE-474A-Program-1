@@ -29,10 +29,10 @@ module CIRCUIT1(a, b, c, x, z);
     wire [7:0] d, e;
     wire [15:0] f, g_lt, g_gt, g_eq, xwire;
     
-    ADD ADD_1(a, b, d);
-    ADD ADD_2(a, c, e);
-    COMP COMP_1(d, e, g_gt, g_lt, g_eq);
-    MUX2x1 MUX2x1_1(d, e, g_gt, z);
+    ADD #(8) ADD_1(a, b, d);
+    ADD #(8) ADD_2(a, c, e);
+    COMP #(8) COMP_1(d, e, g_gt, g_lt, g_eq);
+    MUX2x1 #(8) MUX2x1_1(d, e, g_gt, z);
     MUL MUL_1(a, c, f);
     SUB SUB_1(f, d, xwire);
     REG REG_1(x, xwire);
