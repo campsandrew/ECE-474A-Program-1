@@ -20,8 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CIRCUIT5(a, b, c, x, z);
+module CIRCUIT5(a, b, c, Clk, Rst, x, z);
     
+    input Clk, Rst;
     input [63:0] a, b, c;
     output [31:0] x, z;
     
@@ -31,35 +32,21 @@ module CIRCUIT5(a, b, c, x, z);
     
     reg [63:0] greg, hreg;
     
-    ADD #() add1(a, b, d);
-    ADD #() add2(a, c, e);
-    SUB #() sub1(a, b, f);
-    COMP #() comp1(d, e, dGTe, dLTe, dEQe);
-    COMP #() comp2(d, e, dGTe, dLTe, dEQe);
-    MUX #() mux1(e, d, dLTe, g);
-    MUX #() mux2(f, g, dEQe, h);
-    SHL #() shl1();
-    SHR #() shr1();
+    ADD #(64) add1(a, b, d);
+    ADD #(64) add2(a, c, e);
+    SUB #(64) sub1(a, b, f);
+    COMP #(64) comp1(d, e, dGTe, dLTe, dEQe);
+    COMP #(64) comp2(d, e, dGTe, dLTe, dEQe);
+    MUX #(64) mux1(e, d, dLTe, g);
+    MUX #(64) mux2(f, g, dEQe, h);
+    SHL #(64) shl1(hreg, dLTe, xrin);
+    SHR #(64) shr1(greg, dEQe, zrin);
     
-    REG #() reg1();
-    REG #() reg2();
+    REG #(32) reg1(xrin, Clk, Rst, x);
+    REG #(32) reg2(zrin, Clk, Rst, z);
     
     always @(g, h) begin
         greg <= g; hreg <= h;
     end
-    
-    d = a + b
-    e = a + c
-    f = a - b  
-    dEQe = d == e
-    dLTe = d < e
-    g = dLTe ? d : e 
-    h = dEQe ? g : f 
-    greg = g
-    hreg = h
-    xrin = hreg << dLTe
-    zrin = greg >> dEQe
-    x = xrin
-    z = zrin
     
 endmodule
