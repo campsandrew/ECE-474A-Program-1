@@ -9,7 +9,7 @@
 
 module MOD(a, b, rem);
 
-    parameter DATAWIDTH = 2;
+    parameter DATAWIDTH = 64;
 
     input [DATAWIDTH - 1:0] a, b;
     output reg [DATAWIDTH - 1:0] rem;

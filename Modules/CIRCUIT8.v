@@ -1,22 +1,8 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Name: Andrew Camps, Jason Tran, Steve Miller
 // Create Date: 09/17/2017 05:35:13 PM
-// Design Name: 
 // Module Name: CIRCUIT1
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -28,7 +14,7 @@ module CIRCUIT8(a, b, c, zero, Clk, Rst, z);
     output [63:0] z;
 
     wire [63:0] e, f, g, zwire;
-    wire gEQz, gLTz, gEQz;  
+    wire gEQz, gLTz, gGTz;  
     
     DEC #(64) dec1(a, e);
     INC #(64) inc1(c, f);
