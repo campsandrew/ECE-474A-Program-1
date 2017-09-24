@@ -13,7 +13,7 @@ module CIRCUIT6(a, b, c, d, e, f, g, h, num, Clk, Rst, avg);
 
     output [15:0] avg;
 
-    reg [15:0] r1, r2, r3, r4, r5, r6, r7;
+    wire [15:0] r1, r2, r3, r4, r5, r6, r7;
 
     wire [15:0] avgwire;
     wire [31:0] t1, t2, t3, t4, t5, t6, t7;
