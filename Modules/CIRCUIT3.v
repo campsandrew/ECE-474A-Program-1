@@ -29,16 +29,16 @@ module CIRCUIT3(a, b, c, d, e, f, g, h, sa, avg, Clk, Rst);
     
     wire [31:0] l00, l01, l02, l03, l10, l11, l2, l2div2, l2div4, l2div8;
     
-    ADD ADD_1(a, b, l00);
-    ADD ADD_2(c, d, l01);
-    ADD ADD_3(e, f, l02);
-    ADD ADD_4(g, h, l03);
-    ADD ADD_5(l00, l01, l10);
-    ADD ADD_6(l02, l03, l11);
-    ADD ADD_7(l10, l11, l2);
-    SHR SHR_1(l2, sa, l2div2);
-    SHR SHR_2(l2div2, sa, l2div4);
-    SHR SHR_3(l2div4, sa, l2div8);
-    REG REG_1(l2div8, Clk, Rst, avg);
+    ADD #(32) ADD_1(a, b, l00);
+    ADD #(32) ADD_2(c, d, l01);
+    ADD #(32) ADD_3(e, f, l02);
+    ADD #(32) ADD_4(g, h, l03);
+    ADD #(32) ADD_5(l00, l01, l10);
+    ADD #(32) ADD_6(l02, l03, l11);
+    ADD #(32) ADD_7(l10, l11, l2);
+    SHR #(32) SHR_1(l2, sa, l2div2);
+    SHR #(32) SHR_2(l2div2, sa, l2div4);
+    SHR #(32) SHR_3(l2div4, sa, l2div8);
+    REG #(16) REG_1(l2div8, Clk, Rst, avg);
 
 endmodule
