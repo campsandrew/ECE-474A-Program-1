@@ -7,28 +7,28 @@ Xilinx Synthesis Tool Version: Vivado 2016.4
 Individual Modules:
 	Board: xc7a100tcsg324-1
 	Speed: -1	
-CIRCUT1: 
+CIRCUIT1: 
 	Board: xc7a100tcsg324-1
 	Speed: -1
-CIRCUT2:
+CIRCUIT2:
 	Board: xc7a100tcsg324-1
 	Speed: -1
-CIRCUT3:
+CIRCUIT3:
 	Board: xc7a100tcsg324-1
 	Speed: -1
-CIRCUT4:
+CIRCUIT4:
 	Board: xc7a100tcsg324-1
 	Speed: -1
-CIRCUT5:
+CIRCUIT5:
 	Board: xc7a200tfbg676-1
 	Speed: -1
-CIRCUT6:
+CIRCUIT6:
 	Board: xc7a200tfbg676-1 
 	Speed: -1
-CIRCUT7:
+CIRCUIT7:
 	Board: xc7a200tfbg676-1
 	Speed: -1
-CIRCUT8:
+CIRCUIT8:
 	Board: xc7a200tfbg676
 	Speed: -1
 
@@ -36,6 +36,6 @@ Description of Calculation Critical Path:
 	Individual Modules:
 		Actual Timing - Was found by synthesizing each module for each data width and grabbing the unconstrained total delay from the ‘Synthesized Design’ menu. These were then recorded in the DPCL_LAT.txt
 
-	CIRCUT1 - 8:
+	CIRCUIT1 - 8:
 		Estimated Timing - Was found by drawing out the critical paths of each circuit and adding up the timing recorded in NETLISTS_LAT.txt from each individual module that was used in the critical path
 		Actual Timing - Was found by implementing each module using the boards specified above and grabbing the unconstrained total delay from the ‘Implementation Design’ menu. These were then recorded in the NETLISTS_LAT.txt
