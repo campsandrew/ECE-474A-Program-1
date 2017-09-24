@@ -1,22 +1,8 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/17/2017 05:35:13 PM
-// Design Name: 
+// Name: Andrew Camps, Jason Tran, Steve Miller
+// Create Date: 09/17/2017 05:35:13 PM 
 // Module Name: CIRCUIT1
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -42,8 +28,8 @@ module CIRCUIT5(a, b, c, Clk, Rst, x, z);
     SHL #(64) shl1(hreg, dLTe, xrin);
     SHR #(64) shr1(greg, dEQe, zrin);
     
-    REG #(32) reg1(xrin, Clk, Rst, x);
-    REG #(32) reg2(zrin, Clk, Rst, z);
+    REG #(64) reg1(xrin, Clk, Rst, x);
+    REG #(64) reg2(zrin, Clk, Rst, z);
     
     always @(g, h) begin
         greg <= g; hreg <= h;

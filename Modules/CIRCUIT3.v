@@ -25,6 +25,6 @@ module CIRCUIT3(a, b, c, d, e, f, g, h, sa, avg, Clk, Rst);
     SHR #(32) SHR_1(l2, sa, l2div2);
     SHR #(32) SHR_2(l2div2, sa, l2div4);
     SHR #(32) SHR_3(l2div4, sa, l2div8);
-    REG #(16) REG_1(l2div8, Clk, Rst, avg);
+    REG #(32) REG_1(l2div8, Clk, Rst, avg);
 
 endmodule
