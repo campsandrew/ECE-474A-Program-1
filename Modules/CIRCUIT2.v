@@ -37,6 +37,6 @@ module CIRCUIT2(a, b, c, x, z, Clk, Rst);
     MUX2x1 #(32) MUX2x1_2(g, f, dEQe, h);
     SHL #(32) SHL_1(g, dLTe, xwire);
     SHR #(32) SHR_1(h, dEQe, zwire);
-    REG #(32) REG_1(x, Clk, Rst, xwire);
-    REG #(32) REG_2(z, Clk, Rst, zwire);
+    REG #(32) REG_1(xwire, Clk, Rst, x);
+    REG #(32) REG_2(zwire, Clk, Rst, z);
 endmodule

@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CIRCUIT3(a, b, c, d, e, f, g, h, sa, avg);
+module CIRCUIT3(a, b, c, d, e, f, g, h, sa, avg, Clk, Rst);
+    input Clk, Rst;
     input [15:0] a, b, c, d, e, f, g, h;
     input [7:0] sa;
     
@@ -38,6 +39,6 @@ module CIRCUIT3(a, b, c, d, e, f, g, h, sa, avg);
     SHR SHR_1(l2, sa, l2div2);
     SHR SHR_2(l2div2, sa, l2div4);
     SHR SHR_3(l2div4, sa, l2div8);
-    REG REG_1(l2div8, avg);
+    REG REG_1(l2div8, Clk, Rst, avg);
 
 endmodule
