@@ -21,7 +21,7 @@ module CIRCUIT1(a, b, c, x, z, Clk, Rst);
     COMP #(8) COMP_1(d, e, g_gt, g_lt, g_eq);
     MUX2x1 #(8) MUX2x1_1(e, d, g_gt, z);
     MUL #(8) MUL_1(a, c, f);
-    SUB #(8) SUB_1(f, d, xwire);
+    SUB #(16) SUB_1(f, d, xwire);
     REG #(16) REG_1(xwire, Clk, Rst, x);
 
 endmodule
