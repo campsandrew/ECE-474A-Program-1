@@ -13,7 +13,7 @@ module CIRCUIT5(a, b, c, Clk, Rst, x, z);
     output [31:0] x, z;
     
     wire [63:0] d, e, f, g, h; 
-    wire dLTe, dEQe, dGTe;
+    wire dLTe, dEQe;
     wire [63:0] xrin, zrin;
     
     reg [63:0] greg, hreg;

@@ -14,7 +14,7 @@ module CIRCUIT4(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, Clk, Rst, final)
     
     wire [31:0] t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14;
     
-    ADD #(32) add1(a, b, t1);
+    ADD #(8) add1(a, b, t1);
     ADD #(32) add2(t1, c, t2);
     ADD #(32) add3(t2, d, t3);
     ADD #(32) add4(t3, e, t4);

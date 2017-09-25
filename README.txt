@@ -23,7 +23,7 @@ CIRCUIT5:
 	Board: xc7a200tfbg676-1
 	Speed: -1
 CIRCUIT6:
-	Board: xc7a200tfbg676-1 
+	Board: xc7a100tcsg324-1
 	Speed: -1
 CIRCUIT7:
 	Board: xc7a200tfbg676-1
